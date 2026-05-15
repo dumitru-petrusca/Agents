@@ -1,0 +1,457 @@
+[
+  {
+    "fullname": "google.golang.org/adk/agent/llmagent.New",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/agent.go",
+    "line": 100,
+    "source_line": "return llmagent.New(llmagent.Config{",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/adk/model/gemini.NewModel",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/main.go",
+    "line": 70,
+    "source_line": "m, err := gemini.NewModel(ctx, cfg.ModelName, \u0026genai.ClientConfig{",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/adk/agent.NewSingleLoader",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/main.go",
+    "line": 84,
+    "source_line": "loader := agent.NewSingleLoader(costAgent)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/adk/session.InMemoryService",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/main.go",
+    "line": 89,
+    "source_line": "SessionService: session.InMemoryService(),",
+    "resolution": "typechecker"
+  },
+  {
+    "fullname": "google.golang.org/adk/server/adkrest.NewHandler",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/main.go",
+    "line": 93,
+    "source_line": "adkHandler := adkrest.NewHandler(launcherConfig, 120*time.Second)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/adk/tool/functiontool.New",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/agent_engines.go",
+    "line": 35,
+    "source_line": "return functiontool.New(functiontool.Config{",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/adk/tool/functiontool.New",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/assets.go",
+    "line": 31,
+    "source_line": "return functiontool.New(functiontool.Config{",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/asset/apiv1.NewClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/assets.go",
+    "line": 38,
+    "source_line": "c, err := asset.NewClient(ctx)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/asset/apiv1.Client.Close",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/assets.go",
+    "line": 42,
+    "source_line": "defer c.Close()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/asset/apiv1.Client.ListAssets",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/assets.go",
+    "line": 52,
+    "source_line": "it := c.ListAssets(ctx, req)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/asset/apiv1.AssetIterator.Next",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/assets.go",
+    "line": 54,
+    "source_line": "resp, err := it.Next()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/adk/tool/functiontool.New",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 42,
+    "source_line": "return functiontool.New(functiontool.Config{",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/bigquery.NewClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 60,
+    "source_line": "client, err := bigquery.NewClient(ctx, args.ProjectID)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/bigquery.Client.Close",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 64,
+    "source_line": "defer client.Close()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/bigquery.Client.Query",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 95,
+    "source_line": "q := client.Query(queryStr)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/bigquery.Query.Read",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 100,
+    "source_line": "it, err := q.Read(ctx)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/bigquery.RowIterator.Next",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 108,
+    "source_line": "err := it.Next(\u0026row)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/bigquery.Client.DatasetInProject",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 169,
+    "source_line": "dataset := client.DatasetInProject(projectID, \"billing_export\")",
+    "resolution": "typechecker"
+  },
+  {
+    "fullname": "cloud.google.com/go/bigquery.Dataset.Tables",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 170,
+    "source_line": "it := dataset.Tables(ctx)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/bigquery.TableIterator.Next",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/billing.go",
+    "line": 172,
+    "source_line": "t, err := it.Next()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/adk/tool/functiontool.New",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/compute.go",
+    "line": 39,
+    "source_line": "return functiontool.New(functiontool.Config{",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/compute/apiv1.NewInstancesRESTClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/compute.go",
+    "line": 46,
+    "source_line": "client, err := compute.NewInstancesRESTClient(ctx)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/compute/apiv1.InstancesClient.Close",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/compute.go",
+    "line": 50,
+    "source_line": "defer client.Close()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/compute/apiv1.InstancesClient.AggregatedList",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/compute.go",
+    "line": 59,
+    "source_line": "it := client.AggregatedList(ctx, req)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/compute/apiv1.InstancesScopedListPairIterator.Next",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/compute.go",
+    "line": 61,
+    "source_line": "pair, err := it.Next()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/adk/tool/functiontool.New",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 36,
+    "source_line": "return functiontool.New(functiontool.Config{",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/container/apiv1.NewClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 43,
+    "source_line": "client, err := container.NewClusterManagerClient(ctx)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/container/apiv1.ClusterManagerClient.Close",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 47,
+    "source_line": "defer client.Close()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/container/apiv1.ClusterManagerClient.ListClusters",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 56,
+    "source_line": "resp, err := client.ListClusters(ctx, req)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/container/apiv1/containerpb.Cluster_Status.String",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 86,
+    "source_line": "Status:        c.Status.String(),",
+    "resolution": "typechecker"
+  },
+  {
+    "fullname": "google.golang.org/adk/tool/functiontool.New",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 114,
+    "source_line": "return functiontool.New(functiontool.Config{",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/run/apiv2.NewServicesClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 125,
+    "source_line": "client, err := run.NewServicesClient(ctx)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/run/apiv2.ServicesClient.Close",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 129,
+    "source_line": "defer client.Close()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/run/apiv2.ServicesClient.ListServices",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 137,
+    "source_line": "it := client.ListServices(ctx, req)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/run/apiv2.ServiceIterator.Next",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/containers.go",
+    "line": 139,
+    "source_line": "svc, err := it.Next()",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/api/option.WithCredentialsFile",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/sandbox_test_auth.go",
+    "line": 12,
+    "source_line": "client, _ := container.NewClusterManagerClient(ctx, option.WithCredentialsFile(\"/path/to/key.json\"))",
+    "resolution": "typechecker"
+  },
+  {
+    "fullname": "cloud.google.com/go/container/apiv1.NewClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/sandbox_test_auth.go",
+    "line": 12,
+    "source_line": "client, _ := container.NewClusterManagerClient(ctx, option.WithCredentialsFile(\"/path/to/key.json\"))",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "option.WithCredentialsFile(\"/path/to/key.json\")",
+      "provenance": "SA_EXPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.golang.org/api/option.WithCredentialsJSON",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/sandbox_test_auth.go",
+    "line": 18,
+    "source_line": "client, _ := container.NewClusterManagerClient(ctx, option.WithCredentialsJSON([]byte(\"{}\")))",
+    "resolution": "typechecker"
+  },
+  {
+    "fullname": "cloud.google.com/go/container/apiv1.NewClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/sandbox_test_auth.go",
+    "line": 18,
+    "source_line": "client, _ := container.NewClusterManagerClient(ctx, option.WithCredentialsJSON([]byte(\"{}\")))",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "option.WithCredentialsJSON([]byte(\"{}\"))",
+      "provenance": "SA_EXPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "cloud.google.com/go/container/apiv1.NewClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/go/tools/sandbox_test_auth.go",
+    "line": 25,
+    "source_line": "client, _ := container.NewClusterManagerClient(ctx, myTokenSource)",
+    "resolution": "typechecker",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  }
+]

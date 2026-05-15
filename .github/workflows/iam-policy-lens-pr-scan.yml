@@ -1,0 +1,33 @@
+name: IAM Policy Lens PR Scan
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  scan-python:
+    name: Scan Python Agent
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dumitru-petrusca/skills/actions/analyze-python@main
+        with:
+          target-path: 'gcp_cost_optimizer_agent/python'
+
+  scan-go:
+    name: Scan Go Agent
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dumitru-petrusca/skills/actions/analyze-go@main
+        with:
+          target-path: 'gcp_cost_optimizer_agent/go'
+
+  scan-ts:
+    name: Scan TypeScript Agent
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dumitru-petrusca/skills/actions/analyze-ts@main
+        with:
+          target-path: 'gcp_cost_optimizer_agent/ts'
