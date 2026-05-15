@@ -9,10 +9,9 @@ export const ListRunningVmsInput = z.object({
 export async function list_running_vms(args: z.infer<typeof ListRunningVmsInput>): Promise<any> {
   const client = new InstancesClient();
   
-  const instancesScopedList = client.aggregatedListAsync({
-    project: args.project_id,
-    filter: "status=RUNNING",
-  });
+  const instancesScopedList = client.aggregatedListAsync(
+    { project: args.project_id, filter: "status=RUNNING" }
+  );
 
   const by_zone: Record<string, any[]> = {};
   let total = 0;

@@ -43,7 +43,9 @@ func NewListRunningVMsTool() (tool.Tool, error) {
 }
 
 func ListRunningVMs(ctx tool.Context, args ListRunningVMsArgs) (ListRunningVMsResult, error) {
-	client, err := compute.NewInstancesRESTClient(ctx)
+	client, err := compute.NewInstancesRESTClient(
+		ctx,
+	)
 	if err != nil {
 		return ListRunningVMsResult{}, fmt.Errorf("creating compute instances client: %w", err)
 	}
@@ -56,7 +58,9 @@ func ListRunningVMs(ctx tool.Context, args ListRunningVMsArgs) (ListRunningVMsRe
 	}
 
 	byZone := make(map[string][]VMInfo)
-	it := client.AggregatedList(ctx, req)
+	it := client.AggregatedList(
+		ctx, req,
+	)
 	for {
 		pair, err := it.Next()
 		if err == iterator.Done {

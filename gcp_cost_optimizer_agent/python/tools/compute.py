@@ -27,7 +27,9 @@ def list_running_vms(project_id: str) -> dict:
 
     by_zone: dict[str, list[dict]] = {}
     
-    for zone, instances_scoped_list in client.aggregated_list(request=request):
+    for zone, instances_scoped_list in client.aggregated_list(
+        request=request,
+    ):
         vms = instances_scoped_list.instances
         if not vms:
             continue
