@@ -10,15 +10,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install Project Dependencies
+        run: |
+          python -m venv gcp_cost_optimizer_agent/python/.venv
+          source gcp_cost_optimizer_agent/python/.venv/bin/activate
+          pip install -r gcp_cost_optimizer_agent/python/requirements.txt
       - uses: dumitru-petrusca/skills/actions/analyze-python@main
         with:
           target-path: 'gcp_cost_optimizer_agent/python'
+          python-environment: 'gcp_cost_optimizer_agent/python/.venv'
 
   scan-go:
     name: Scan Go Agent
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '>=1.21.0'
+      - name: Download Go Modules
+        run: |
+          cd gcp_cost_optimizer_agent/go
+          go mod download
       - uses: dumitru-petrusca/skills/actions/analyze-go@main
         with:
           target-path: 'gcp_cost_optimizer_agent/go'
@@ -28,6 +42,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install TypeScript Dependencies
+        run: |
+          cd gcp_cost_optimizer_agent/ts
+          npm ci
       - uses: dumitru-petrusca/skills/actions/analyze-ts@main
         with:
           target-path: 'gcp_cost_optimizer_agent/ts'
+
