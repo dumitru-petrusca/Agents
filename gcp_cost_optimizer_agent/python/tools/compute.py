@@ -18,6 +18,7 @@ def list_running_vms(project_id: str) -> dict:
               name, machine_type, status, internal_ip, external_ip (if any)
           - "summary": list of {"zone": str, "count": int} sorted by count desc
     """
+    # IAM Policy Lens scanner monitors GAPIC client invocations like InstancesClient
     client = compute_v1.InstancesClient()
     request = compute_v1.AggregatedListInstancesRequest(
         project=project_id,
