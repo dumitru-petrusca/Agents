@@ -119,7 +119,6 @@ locals {
   agent_principal = "principal://agents.global.proj-${data.google_project.project.number}.system.id.goog/resources/aiplatform/projects/${data.google_project.project.number}/locations/${var.region}/reasoningEngines/${local.reasoning_engine_id}"
 }
 
-# Grant the Dynamic Agent Identity its required Admin and Viewer roles
 resource "google_project_iam_member" "agent_aiplatform" {
   project = var.project_id
   role    = "roles/aiplatform.admin"
