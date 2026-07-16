@@ -117,45 +117,24 @@ locals {
 
   # Workload Identity Principal format for Reasoning Engine agent identity
   agent_principal = "principal://agents.global.proj-${data.google_project.project.number}.system.id.goog/resources/aiplatform/projects/${data.google_project.project.number}/locations/${var.region}/reasoningEngines/${local.reasoning_engine_id}"
-}
 
-# Least-Privilege Custom IAM Role generated via Policy Lens static analysis scanner
-resource "google_project_iam_custom_role" "agent_custom_role" {
-  project     = var.project_id
-  role_id     = "gcp_cost_optimizer_agent"
-  title       = "GCP Cost Optimizer Agent Custom Role"
-  description = "Least-privilege permissions determined by Policy Lens static code analysis scanner."
-  stage       = "GA"
-
-  permissions = [
-    # --- Cloud Asset Inventory (list_resources tool) ---
-    "cloudasset.assets.searchAllResources",
-
-    # --- Compute Engine (list_running_vms tool) ---
-    "compute.instances.list",
-
-    # --- Kubernetes Engine (list_gke_clusters tool) ---
-    "container.clusters.list",
-
-    # --- Cloud Run (list_cloud_run_services tool) ---
-    "run.services.list",
-
-    # --- BigQuery Billing Data (query_billing tool) ---
-    "bigquery.datasets.get",
-    "bigquery.jobs.create",
-    "bigquery.tables.list",
-
-    # --- Vertex AI Model Predictions & Agent Engines (Gemini calls & list_agent_engines tool) ---
-    "aiplatform.endpoints.predict",
-    "aiplatform.reasoningEngines.predict",
-    "aiplatform.reasoningEngines.list",
-    "aiplatform.reasoningEngines.get",
+  # Standard pre-defined roles (admin & viewer only as per requirements)
+  agent_roles = [
+    "roles/aiplatform.admin",
+    "roles/bigquery.admin",
+    "roles/cloudasset.viewer",
+    "roles/compute.viewer",
+    "roles/container.viewer",
+    "roles/run.viewer"
   ]
 }
 
-# Grant the Dynamic Agent Identity its Least-Privilege Custom IAM Role
+# Grant the Dynamic Agent Identity its required Admin and Viewer roles
 resource "google_project_iam_member" "agent_iam" {
+  for_each = toset(local.agent_roles)
+
   project = var.project_id
-  role    = google_project_iam_custom_role.agent_custom_role.id
+  role    = each.value
   member  = local.agent_principal
 }
+
