@@ -117,24 +117,42 @@ locals {
 
   # Workload Identity Principal format for Reasoning Engine agent identity
   agent_principal = "principal://agents.global.proj-${data.google_project.project.number}.system.id.goog/resources/aiplatform/projects/${data.google_project.project.number}/locations/${var.region}/reasoningEngines/${local.reasoning_engine_id}"
-
-  # Standard pre-defined roles (admin & viewer only as per requirements)
-  agent_roles = [
-    "roles/aiplatform.admin",
-    "roles/bigquery.admin",
-    "roles/cloudasset.viewer",
-    "roles/compute.viewer",
-    "roles/container.viewer",
-    "roles/run.viewer"
-  ]
 }
 
 # Grant the Dynamic Agent Identity its required Admin and Viewer roles
-resource "google_project_iam_member" "agent_iam" {
-  for_each = toset(local.agent_roles)
-
+resource "google_project_iam_member" "agent_aiplatform" {
   project = var.project_id
-  role    = each.value
+  role    = "roles/aiplatform.admin"
+  member  = local.agent_principal
+}
+
+resource "google_project_iam_member" "agent_bigquery" {
+  project = var.project_id
+  role    = "roles/bigquery.admin"
+  member  = local.agent_principal
+}
+
+resource "google_project_iam_member" "agent_cloudasset" {
+  project = var.project_id
+  role    = "roles/cloudasset.viewer"
+  member  = local.agent_principal
+}
+
+resource "google_project_iam_member" "agent_compute" {
+  project = var.project_id
+  role    = "roles/compute.viewer"
+  member  = local.agent_principal
+}
+
+resource "google_project_iam_member" "agent_container" {
+  project = var.project_id
+  role    = "roles/container.viewer"
+  member  = local.agent_principal
+}
+
+resource "google_project_iam_member" "agent_run" {
+  project = var.project_id
+  role    = "roles/run.viewer"
   member  = local.agent_principal
 }
 
