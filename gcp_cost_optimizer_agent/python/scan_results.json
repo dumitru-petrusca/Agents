@@ -1,0 +1,366 @@
+[
+  {
+    "fullname": "google.adk.agents.llm_agent.LlmAgent",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/agent.py",
+    "line": 82,
+    "source_line": "root_agent = Agent(",
+    "resolution": "jedi",
+    "client_fullname": "google.adk.agents.llm_agent",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.aiplatform.initializer._Config.init",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/deploy.py",
+    "line": 56,
+    "source_line": "vertexai.init(project=PROJECT, location=LOCATION)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.aiplatform.initializer._Config",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.asset_v1.AssetServiceClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/assets.py",
+    "line": 23,
+    "source_line": "client = asset_v1.AssetServiceClient()",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.asset_v1.services.asset_service.client",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.asset_v1.types.asset_service.ListAssetsRequest",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/assets.py",
+    "line": 24,
+    "source_line": "request = asset_v1.ListAssetsRequest(",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.asset_v1.types.asset_service",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.asset_v1.AssetServiceClient.list_assets",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/assets.py",
+    "line": 32,
+    "source_line": "for asset in client.list_assets(request=request):",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.asset_v1.AssetServiceClient",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.bigquery.Client",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/billing.py",
+    "line": 30,
+    "source_line": "client = bigquery.Client(project=project_id)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.bigquery.client",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.bigquery.job.query.QueryJobConfig",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/billing.py",
+    "line": 60,
+    "source_line": "job_config = bigquery.QueryJobConfig(",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.bigquery.job.query",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.bigquery.query.ScalarQueryParameter",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/billing.py",
+    "line": 62,
+    "source_line": "bigquery.ScalarQueryParameter(\"project_id\", \"STRING\", project_id),",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.bigquery.query",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.bigquery.Client.query",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/billing.py",
+    "line": 65,
+    "source_line": "rows = list(client.query(query, job_config=job_config).result())",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.bigquery.Client",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.bigquery.Client.list_tables",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/billing.py",
+    "line": 99,
+    "source_line": "tables = list(client.list_tables(dataset_ref, max_results=50))",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.bigquery.Client",
+    "credentials": {
+      "source": "defined at line 91",
+      "provenance": "UNKNOWN",
+      "identity": "UNKNOWN"
+    }
+  },
+  {
+    "fullname": "google.cloud.compute_v1.InstancesClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/compute.py",
+    "line": 22,
+    "source_line": "client = compute_v1.InstancesClient()",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.compute_v1.services.instances.client",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.compute_v1.types.compute.AggregatedListInstancesRequest",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/compute.py",
+    "line": 23,
+    "source_line": "request = compute_v1.AggregatedListInstancesRequest(",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.compute_v1.types.compute",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.compute_v1.InstancesClient.aggregated_list",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/compute.py",
+    "line": 30,
+    "source_line": "for zone, instances_scoped_list in client.aggregated_list(",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.compute_v1.InstancesClient",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/containers.py",
+    "line": 24,
+    "source_line": "client = container_v1.ClusterManagerClient(credentials=credentials)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.services.cluster_manager.client",
+    "credentials": {
+      "source": "service_account.Credentials.from_service_account_file('/path/to/your/service-account-key.json')",
+      "provenance": "SA_EXPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient.list_clusters",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/containers.py",
+    "line": 26,
+    "source_line": "response = client.list_clusters(parent=parent)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "credentials": {
+      "source": "service_account.Credentials.from_service_account_file('/path/to/your/service-account-key.json')",
+      "provenance": "SA_EXPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.types.cluster_service.Cluster.Status",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/containers.py",
+    "line": 44,
+    "source_line": "\"status\": container_v1.Cluster.Status(cluster.status).name,",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.types.cluster_service.Cluster",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.run_v2.ServicesClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/containers.py",
+    "line": 64,
+    "source_line": "client = run_v2.ServicesClient()",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.run_v2.services.services.client",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.run_v2.ServicesClient.list_services",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/containers.py",
+    "line": 68,
+    "source_line": "for svc in client.list_services(parent=parent):",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.run_v2.ServicesClient",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/dwd_and_adc.py",
+    "line": 12,
+    "source_line": "client = container_v1.ClusterManagerClient(credentials=dwd_creds)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.services.cluster_manager.client",
+    "credentials": {
+      "source": "creds.with_subject('user@my-domain.com')",
+      "provenance": "DWD",
+      "identity": "IMPERSONATED"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/dwd_and_adc.py",
+    "line": 18,
+    "source_line": "client = container_v1.ClusterManagerClient(credentials=creds)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.services.cluster_manager.client",
+    "credentials": {
+      "source": "google.auth.default()",
+      "provenance": "SA_DEFAULT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.compute_v1.InstancesClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/nested_scopes.py",
+    "line": 7,
+    "source_line": "client = compute_v1.InstancesClient()",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.compute_v1.services.instances.client",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/nested_scopes.py",
+    "line": 18,
+    "source_line": "client = container_v1.ClusterManagerClient(credentials=credentials)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.services.cluster_manager.client",
+    "credentials": {
+      "source": "service_account.Credentials.from_service_account_file('/path/to/my-key.json')",
+      "provenance": "SA_EXPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient.list_clusters",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/nested_scopes.py",
+    "line": 21,
+    "source_line": "response = client.list_clusters(parent=\"projects/my-project/locations/-\")",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "credentials": {
+      "source": "service_account.Credentials.from_service_account_file('/path/to/my-key.json')",
+      "provenance": "SA_EXPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.compute_v1.InstancesClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/nested_scopes.py",
+    "line": 25,
+    "source_line": "client = compute_v1.InstancesClient()",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.compute_v1.services.instances.client",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.compute_v1.InstancesClient.aggregated_list",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/nested_scopes.py",
+    "line": 27,
+    "source_line": "for zone, instances in client.aggregated_list(project=\"my-project\"):",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.compute_v1.InstancesClient",
+    "credentials": {
+      "source": "default/implicit",
+      "provenance": "IMPLICIT",
+      "identity": "APP"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/oauth_modes.py",
+    "line": 14,
+    "source_line": "client = container_v1.ClusterManagerClient(credentials=creds)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.services.cluster_manager.client",
+    "credentials": {
+      "source": "flow.run_local_server(port=0)",
+      "provenance": "OAUTH_FLOW",
+      "identity": "USER"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/oauth_modes.py",
+    "line": 20,
+    "source_line": "client = container_v1.ClusterManagerClient(credentials=creds)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.services.cluster_manager.client",
+    "credentials": {
+      "source": "credentials.Credentials.from_authorized_user_file('authorized_user.json')",
+      "provenance": "OAUTH_USER",
+      "identity": "USER"
+    }
+  },
+  {
+    "fullname": "google.cloud.container_v1.ClusterManagerClient",
+    "file_path": "/Users/petrusca/Google/agents/gcp_cost_optimizer_agent/python/tools/oauth_modes.py",
+    "line": 30,
+    "source_line": "client = container_v1.ClusterManagerClient(credentials=creds)",
+    "resolution": "jedi",
+    "client_fullname": "google.cloud.container_v1.services.cluster_manager.client",
+    "credentials": {
+      "source": "impersonated_credentials.Credentials(source_credentials=source_creds, target_principal='target-service-account@project.iam.gserviceaccount.com', target_scopes=['https://www.googleapis.com/auth/cloud-platform'])",
+      "provenance": "IMPERSONATION",
+      "identity": "IMPERSONATED"
+    }
+  }
+]
