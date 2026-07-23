@@ -47,7 +47,7 @@ resource "null_resource" "package_agent" {
   triggers = {
     # Triggers packaging when agent source files or tools directory modify
     # Uses MD5 hashes of the primary python files to detect changes
-    agent_hash   = filemd5("${path.module}/../agent.py")
+    agent_hash    = filemd5("${path.module}/../agent.py")
     packager_hash = filemd5("${path.module}/../package_agent.py")
   }
 
