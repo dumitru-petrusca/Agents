@@ -1,0 +1,11 @@
+# Replace with your actual GCP project ID
+project_id = "your-gcp-project-id"
+
+# The region where the Vertex AI Reasoning Engine should be deployed
+region = "us-central1"
+
+# Name of the GCS staging bucket (without gs:// prefix)
+staging_bucket = "your-agent-staging-bucket-name"
+
+# Change to true if you want Terraform to create the staging bucket for you
+create_bucket = false
